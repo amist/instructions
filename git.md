@@ -19,9 +19,9 @@ You can see the status of the files in typing:
 
 #### Untracked to Tracked ####
 
-When a file is created or modified, it's in the **untracked** stage.
+When a file is created or modified, it's in the untracked stage.
 
-To add a file for the **tracked** stage:
+To add a file for the tracked stage:
 
 	git add <filename or pattern>
 
@@ -45,7 +45,7 @@ To push our local repository to github's repository, we need to push it:
 
 	git push origin master
 
-If the remote server doesn't have your ssh keys, you'll be asked to enter a username and password.
+If the remote server doesn't have your ssh keys, you'll be asked to enter a username and a password.
 
 ---
 
@@ -122,7 +122,7 @@ Edit the `.gitignore` file, then type:
 
 ### Tagging ###
 
-Tagging is a way to mark a commit, making it easy to checkout that commit. Tags need to be push to the remote repository separately.
+Tagging is a way to mark a commit, making it easy to checkout that commit later. Tags need to be push to the remote repository separately.
 
 #### Tag ####
 	git tag -a <tag name> -m "<tag comment>"
