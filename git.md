@@ -41,10 +41,6 @@ To commit a file:
 
 To push our local repository to github's repository, we need to push it:
 
-`git push`
-
-If we have more than one branch and we want to push for the master branch:
-
 `git push origin master`
 
 If the remote server doesn't have your ssh keys, you'll be asked to enter a username and password.
@@ -63,10 +59,6 @@ In `projects` directory we type:
 `git clone https://github.com/my_user/my_proj`
 
 #### Updating Changes from Others ####
-
-`git pull`
-
-If we have more than one branch and we want to update from the master branch:
 
 `git pull origin master`
 
