@@ -66,6 +66,82 @@ In `projects` directory we type:
 
 `git add <filename or directory>`
 
-`git commit -m "<some comment"`
+`git commit -m "<some comment>"`
 
-`git push origin master` 
+`git push origin master`
+
+---
+
+Miscellaneous Actions
+---------------------
+
+All of the following commands are done inside the project's directory, unless noted otherwise.
+
+### Revert ###
+
+#### Revert the local repository to be like the origin repository ####
+`git reset --hard origin/master`
+
+#### Revert the changes in the working copy to be like the local repository: ####
+`git checkout .`
+
+#### Cancel 'git add' (untrack all the tracked files) ####
+`git reset`
+
+---
+
+### Show History ###
+#### In the command line: ####
+`git log`
+
+#### In a GUI ####
+`gitk`
+ 
+---
+
+### Show GUI for track, commit and push ###
+`git gui`
+
+
+---
+
+### Ignoring Files ###
+
+It's best to ignore before they are committed. Create or modify the file `.gitignore` to match the files you want to ignore. You can find example files [here](https://github.com/github/gitignore).
+
+#### Ignore Committed Files ####
+Edit the `.gitignore` file, then type:
+
+`git rm -r --cached .`
+
+`git add .`
+
+`git commit -m "Update .gitignore"`
+
+---
+
+### Tagging and Branching ###
+
+Tagging is a way to mark a commit, making it easy to checkout to that commit.
+
+#### Tag ####
+`git tag -a <tag name> -m "<tag comment>"`
+
+Tagging a commit other than the current one can be done easily with the GUI interface. Type `gitk`, then right click on the specific commit and choose `create tag`.
+
+#### Untag ####
+`git tag -d <tag name>`
+
+#### Switch to Tag ####
+`git checkout tags/<tag name>`
+
+#### Switch to Master ####
+`git checkout master`
+
+#### Create a Branch ####
+`git checkout -b <branch name>`
+
+Is equivalent to:
+
+	git branch <branch name>
+	git checkout <branch name>
