@@ -13,7 +13,9 @@ When a new file is created or a file has been changed, it's going through four s
 * **Committed:** the file is part of the local repository.
 * **Pushed:** the file is part of github's repository.
 
-You can see the status of the files in typing: `git status`
+You can see the status of the files in typing:
+
+	git status
 
 #### Untracked to Tracked ####
 
@@ -21,7 +23,7 @@ When a file is created or modified, it's in the **untracked** stage.
 
 To add a file for the **tracked** stage:
 
-`git add <filename or pattern>`
+	git add <filename or pattern>
 
 For example:
 
@@ -35,13 +37,13 @@ After the file is in the list of the candidates for the commit, we need to *comm
 
 To commit a file:
 
-`git commit -m "<some comment>"`
+	git commit -m "<some comment>"
 
 #### Committed to Pushed ####
 
 To push our local repository to github's repository, we need to push it:
 
-`git push origin master`
+	git push origin master
 
 If the remote server doesn't have your ssh keys, you'll be asked to enter a username and password.
 
@@ -56,19 +58,17 @@ Let's say we have a github repository named `my_proj` stored in a github reposit
 
 In `projects` directory we type:
 
-`git clone https://github.com/my_user/my_proj`
+	git clone https://github.com/my_user/my_proj
 
 #### Updating Changes from Others ####
 
-`git pull origin master`
+	git pull origin master
 
 #### Pushing Our Changes ####
 
-`git add <filename or directory>`
-
-`git commit -m "<some comment>"`
-
-`git push origin master`
+	git add <filename or directory>
+	git commit -m "<some comment>"
+	git push origin master
 
 ---
 
@@ -80,27 +80,27 @@ All of the following commands are done inside the project's directory, unless no
 ### Revert ###
 
 #### Revert the local repository to be like the origin repository ####
-`git reset --hard origin/master`
+	git reset --hard origin/master
 
 #### Revert the changes in the working copy to be like the local repository: ####
-`git checkout .`
+	git checkout .
 
 #### Cancel 'git add' (untrack all the tracked files) ####
-`git reset`
+	git reset
 
 ---
 
 ### Show History ###
 #### In the command line: ####
-`git log`
+	git log
 
-#### In a GUI ####
-`gitk`
+#### In a GUI Interface ####
+	gitk
  
 ---
 
 ### Show GUI for track, commit and push ###
-`git gui`
+	git gui
 
 
 ---
@@ -112,11 +112,9 @@ It's best to ignore before they are committed. Create or modify the file `.gitig
 #### Ignore Committed Files ####
 Edit the `.gitignore` file, then type:
 
-`git rm -r --cached .`
-
-`git add .`
-
-`git commit -m "Update .gitignore"`
+	git rm -r --cached .
+	git add .
+	git commit -m "Update .gitignore"
 
 ---
 
@@ -125,21 +123,21 @@ Edit the `.gitignore` file, then type:
 Tagging is a way to mark a commit, making it easy to checkout to that commit.
 
 #### Tag ####
-`git tag -a <tag name> -m "<tag comment>"`
+	git tag -a <tag name> -m "<tag comment>"
 
 Tagging a commit other than the current one can be done easily with the GUI interface. Type `gitk`, then right click on the specific commit and choose `create tag`.
 
 #### Untag ####
-`git tag -d <tag name>`
+	git tag -d <tag name>
 
 #### Switch to Tag ####
-`git checkout tags/<tag name>`
+	git checkout tags/<tag name>
 
 #### Switch to Master ####
-`git checkout master`
+	git checkout master
 
 #### Create a Branch ####
-`git checkout -b <branch name>`
+	git checkout -b <branch name>
 
 Is equivalent to:
 
