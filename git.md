@@ -91,7 +91,7 @@ All of the following commands are done inside the project's directory, unless no
 ---
 
 ### Show History ###
-#### In the command line: ####
+#### In the command line ####
 	git log
 
 #### In a GUI Interface ####
@@ -109,7 +109,7 @@ Git extensions need to be installed for the GUI interface. In windows it usually
 
 ### Ignoring Files ###
 
-It's best to ignore before they are committed, because the repository stores every file that has ever been committed. Create or modify the file `.gitignore` to match the files you want to ignore. You can find example files [here](https://github.com/github/gitignore).
+It's best to ignore files before they being committed, because the repository stores every file that has ever been committed. Create or modify the file `.gitignore` to match the files you want to ignore. You can find example files [here](https://github.com/github/gitignore).
 
 #### Ignore Committed Files ####
 Edit the `.gitignore` file, then type:
@@ -122,7 +122,7 @@ Edit the `.gitignore` file, then type:
 
 ### Tagging ###
 
-Tagging is a way to mark a commit, making it easy to checkout to that commit. Tags need to be push to the remote repository separately.
+Tagging is a way to mark a commit, making it easy to checkout that commit. Tags need to be push to the remote repository separately.
 
 #### Tag ####
 	git tag -a <tag name> -m "<tag comment>"
