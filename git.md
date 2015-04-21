@@ -95,6 +95,8 @@ All of the following commands are done inside the project's directory, unless no
 	git log
 
 #### In a GUI Interface ####
+Git extensions need to be installed for the GUI interface. In windows it usually comes with the regular installation.
+
 	gitk
  
 ---
@@ -107,7 +109,7 @@ All of the following commands are done inside the project's directory, unless no
 
 ### Ignoring Files ###
 
-It's best to ignore before they are committed. Create or modify the file `.gitignore` to match the files you want to ignore. You can find example files [here](https://github.com/github/gitignore).
+It's best to ignore before they are committed, because the repository stores every file that has ever been committed. Create or modify the file `.gitignore` to match the files you want to ignore. You can find example files [here](https://github.com/github/gitignore).
 
 #### Ignore Committed Files ####
 Edit the `.gitignore` file, then type:
@@ -118,23 +120,34 @@ Edit the `.gitignore` file, then type:
 
 ---
 
-### Tagging and Branching ###
+### Tagging ###
 
-Tagging is a way to mark a commit, making it easy to checkout to that commit.
+Tagging is a way to mark a commit, making it easy to checkout to that commit. Tags need to be push to the remote repository separately.
 
 #### Tag ####
 	git tag -a <tag name> -m "<tag comment>"
 
+#### Push Tage to Remote Repository ####
+	git push origin --tags
+
 Tagging a commit other than the current one can be done easily with the GUI interface. Type `gitk`, then right click on the specific commit and choose `create tag`.
 
-#### Untag ####
+#### Delete a Tag ####
 	git tag -d <tag name>
+
+#### Delete a Tag from the Remote Repository ####
+	git push origin :<tag name>
+
+#### Recomment a Tag ####
+	git tag <tag name> <tag name> -f -m "comment"
 
 #### Switch to Tag ####
 	git checkout tags/<tag name>
 
 #### Switch to Master ####
 	git checkout master
+
+### Branching ###
 
 #### Create a Branch ####
 	git checkout -b <branch name>
@@ -143,3 +156,16 @@ Is equivalent to:
 
 	git branch <branch name>
 	git checkout <branch name>
+
+#### Show The Current Branch ####
+	git branch
+
+#### Delete a Branch ####
+	git branch -d <branch name> 
+
+#### Delete a Branch from a Remote Repository ####
+	git push origin --delete <branch name>
+
+#### Merge a Branch into the Master ####
+	git checkout master
+	git merge <branch name>
